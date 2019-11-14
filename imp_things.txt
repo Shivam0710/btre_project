@@ -1,0 +1,1 @@
+STATIC_ROOT in the settings.py folder is because when you do the deployment there's a command named collectstatic and that will look into all the apps in the project and if it has static folder in it takes everything out and puts it into root static folder

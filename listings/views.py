@@ -23,7 +23,6 @@ def listing(request, listing_id):
 	context = {
 		"listing": listing
 	}
-	print(context)
 
 	return render(request, 'listings/listing.html', context)
 

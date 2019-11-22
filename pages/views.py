@@ -16,8 +16,6 @@ def index(request):
 		"price_choices": price_choices
 	}
 
-	print(context)
-
 	return render(request, 'pages/index.html', context)
 
 def about(request):

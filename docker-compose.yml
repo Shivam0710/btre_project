@@ -11,6 +11,8 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
+    networks:
+      - djangonetwork
   web:
     build: .
     command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
@@ -20,3 +22,9 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    networks:
+      - djangonetwork
+
+networks: 
+   djangonetwork:
+      driver: bridge
